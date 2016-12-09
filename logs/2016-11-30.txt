@@ -1,0 +1,127 @@
+Time : 10:50:16
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE relates_type='เจ้าของ' and    data_connect_insurance.RELATIO' at line 22
+Raw SQL : SELECT 
+insure.insurance_customer_activity.insurance_EndDate, 
+insure.insurance_customer_activity.insurance_Status, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_series, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_brand, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_chassis, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_full_chassis, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_regis, 
+data_connect_insurance.RELATIONSHIP_VIEW.regis_num_cc, 
+data_connect_insurance.RELATIONSHIP_VIEW.date_deliver, 
+data_connect_insurance.RELATIONSHIP_VIEW.regis_car_type, 
+data_connect_insurance.RELATIONSHIP_VIEW.regis_date, 
+data_connect_insurance.RELATIONSHIP_VIEW.be, 
+data_connect_insurance.RELATIONSHIP_VIEW.cus_name, 
+data_connect_insurance.RELATIONSHIP_VIEW.cus_surename, 
+data_connect_insurance.RELATIONSHIP_VIEW.relates_type, 
+data_connect_insurance.RELATIONSHIP_VIEW.id_card, 
+data_connect_insurance.RELATIONSHIP_VIEW.address_full_name 
+FROM 
+insure.insurance_customer_activity 
+RIGHT OUTER JOIN data_connect_insurance.RELATIONSHIP_VIEW ON insure.insurance_customer_activity.vehicle_id = data_connect_insurance.RELATIONSHIP_VIEW.vehicle_id AND insure.insurance_customer_activity.cusno = data_connect_insurance.RELATIONSHIP_VIEW.cusno 
+WHERE WHERE relates_type='เจ้าของ' and    data_connect_insurance.RELATIONSHIP_VIEW.vehicle_id ='161722' AND  data_connect_insurance.RELATIONSHIP_VIEW.cusno='5290942'
+
+Time : 10:49:45
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE relates_type='เจ้าของ' and    vehicle_id='161722' AND  cusno' at line 22
+Raw SQL : SELECT 
+insure.insurance_customer_activity.insurance_EndDate, 
+insure.insurance_customer_activity.insurance_Status, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_series, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_brand, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_chassis, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_full_chassis, 
+data_connect_insurance.RELATIONSHIP_VIEW.vehicle_regis, 
+data_connect_insurance.RELATIONSHIP_VIEW.regis_num_cc, 
+data_connect_insurance.RELATIONSHIP_VIEW.date_deliver, 
+data_connect_insurance.RELATIONSHIP_VIEW.regis_car_type, 
+data_connect_insurance.RELATIONSHIP_VIEW.regis_date, 
+data_connect_insurance.RELATIONSHIP_VIEW.be, 
+data_connect_insurance.RELATIONSHIP_VIEW.cus_name, 
+data_connect_insurance.RELATIONSHIP_VIEW.cus_surename, 
+data_connect_insurance.RELATIONSHIP_VIEW.relates_type, 
+data_connect_insurance.RELATIONSHIP_VIEW.id_card, 
+data_connect_insurance.RELATIONSHIP_VIEW.address_full_name 
+FROM 
+insure.insurance_customer_activity 
+RIGHT OUTER JOIN data_connect_insurance.RELATIONSHIP_VIEW ON insure.insurance_customer_activity.vehicle_id = data_connect_insurance.RELATIONSHIP_VIEW.vehicle_id AND insure.insurance_customer_activity.cusno = data_connect_insurance.RELATIONSHIP_VIEW.cusno 
+WHERE WHERE relates_type='เจ้าของ' and    vehicle_id='161722' AND  cusno='5290942'
+
+Time : 10:30:17
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM 
+ data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.' at line 13
+Raw SQL : SELECT 
+data_repair.vehicle_brand, 
+data_repair.vehicle_chassis, 
+data_repair.vehicle_regis, 
+data_repair.vehicle_engines, 
+data_repair.brach_short_name, 
+data_repair.cvhc_guardtime, 
+data_repair.ylist_pw_name, 
+data_repair.yparts_pw_name, 
+data_repair.cvhc_send_time, 
+data_repair.cvhc_time_out, 
+ 
+FROM 
+ data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.vehicle_id=161995  AND YEAR(data_repair.cvhc_guardtime)=YEAR(NOW())
+
+Time : 10:27:18
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM 
+ data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.' at line 13
+Raw SQL : SELECT 
+data_repair.vehicle_brand, 
+data_repair.vehicle_chassis, 
+data_repair.vehicle_regis, 
+data_repair.vehicle_engines, 
+data_repair.brach_short_name, 
+data_repair.cvhc_guardtime, 
+data_repair.ylist_pw_name, 
+data_repair.yparts_pw_name, 
+data_repair.cvhc_send_time, 
+data_repair.cvhc_time_out, 
+ 
+FROM 
+ data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.vehicle_id=161995  AND YEAR(data_repair.cvhc_guardtime)=YEAR(NOW())
+
+Time : 10:17:28
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'data_repair.vehicle_number' in 'field list'
+Raw SQL : SELECT 
+data_repair.vehicle_brand, 
+data_repair.vehicle_chassis, 
+data_repair.vehicle_regis, 
+data_repair.vehicle_engines, 
+data_repair.brach_short_name, 
+data_repair.brach_name, 
+data_repair.cvhc_guardtime, 
+data_repair.ylist_pw_name, 
+data_repair.yparts_pw_name, 
+data_repair.cvhc_send_time, 
+data_repair.cvhc_time_out, 
+data_repair.vehicle_number 
+ 
+FROM 
+ data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.vehicle_id=161995  AND YEAR(data_repair.cvhc_guardtime)=YEAR(NOW())
+
+Time : 10:02:46
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND YEAR(cvhc_guardtime)=YEAR(NOW())' at line 1
+Raw SQL : SELECT * FROM data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.vehicle_id=161995 AND AND YEAR(cvhc_guardtime)=YEAR(NOW())
+
+Time : 10:01:20
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND YEAR(cvhc_guardtime)=YEAR(NOW())' at line 1
+Raw SQL : SELECT * FROM data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.vehicle_id=161995 AND AND YEAR(cvhc_guardtime)=YEAR(NOW())
+
+Time : 09:51:07
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Raw SQL : SELECT * FROM data_connect_insurance.REPAIR_SERVICE_VIEW data_repair WHERE data_repair.vehicle_id=
+
+Time : 07:57:51
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'usedate' in 'where clause'
+Raw SQL : SELECT * FROM DATA_CAL_INSURE WHERE year(usedate)= 2016 and  DATEDIFF(DATE_ADD(DATE_ADD(usedate, INTERVAL 1 YEAR),INTERVAL -120 day),curdate())>=0 
+   AND COALESCE(activity_id,0) <>101  order by activity_date desc
+
+Time : 07:57:48
+SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
+
+Time : 07:30:16
+SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
